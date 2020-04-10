@@ -15,8 +15,8 @@ public class Healthy extends LifeForm {
 	}
 		
 	public void move () {
-		int newX = (int)(Math.random()*5);
-		int newY = (int)(Math.random()*5); 
+		int newX = (int)(Math.random()*100);
+		int newY = (int)(Math.random()*100); 
 		setMyLocation (new Location(newX, newY));
 	}
 	
