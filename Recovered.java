@@ -1,21 +1,32 @@
-import java.awt.Color;
+package Pandemic;
 
-public class Recovered extends LifeForm {
+import java.awt.Color;
+import java.util.Random;
+
+public class Recovered extends Human {
 
 	public Recovered(Location loc, World w) {
 		super(loc, w);
 		myColor = Color.yellow;
 		myLifeSpan = 10;
 	}
-	
-	public void reproduce () {
-		
-	}
 		
 	public void move () {
-		int newX = (int)(Math.random()*100);
-		int newY = (int)(Math.random()*100); 
-		setMyLocation (new Location(newX, newY));
-	}
+        int newX = this.getMyLocation().getX() + rgen.nextInt(-2,2);
+        int newY = this.getMyLocation().getY() +  rgen.nextInt(-2,2);
+        if (newX >= 0 && newX < 20 && newY >= 0 && newY < 20) {
+              validPosition = true;
+              for (LifeForm c: myWorld.getCreatureList()){
+                    if (c.getMyLocation().getX() == newX && c.getMyLocation().getY() == newY) {
+                             validPosition = false;
+                     }
+                }
+          }
+         
+       if (validPosition = true) {
+   			myLocation.setX(newX);
+   			myLocation.setY(newY);
+        }
+     }  
 	
 }

@@ -1,3 +1,5 @@
+package Pandemic;
+
 import java.awt.Color;
 import java.util.ArrayList;
 
@@ -40,7 +42,7 @@ public abstract class LifeForm {
 	}
 	
 	// to be alive you have to be able to reproduce....
-	public abstract void reproduce();
+	//public abstract void reproduce();
 	
 	public abstract void move();
 	

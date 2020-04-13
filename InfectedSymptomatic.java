@@ -1,19 +1,18 @@
+package Pandemic;
+
 import java.awt.Color;
 
-public class InfectedSymptomatic extends LifeForm {
+public class InfectedSymptomatic extends Human {
 
 	public InfectedSymptomatic(Location loc, World w) {
 		super(loc, w);
 		myColor = Color.red;
 		myLifeSpan = 10;
 	}
-	
-	public void reproduce() {
-		
-	}
+
 	
 	public void move () {
-		setMyLocation (myLocation);
+		
 	}
 	
 

@@ -1,3 +1,5 @@
+package Pandemic;
+
 import java.awt.Color;
 
 import acm.graphics.*;
@@ -27,16 +29,10 @@ public class WorldController extends GraphicsProgram {
 		theWorld.getCreatureList().add( new Grass( new Location(4,6), theWorld ));
 		theWorldCanvas = this.getGCanvas();
 		
-		reproduce();
-	}
+		//theWorld.getCreatureList().add( new Cow ( new Location(5,6), theWorld ));
+//		cow.reproduce();
 		
 		
-	}
-	
-	public void reproduce () {
-		int newX = (int)(Math.random()*100);
-		int newY = (int)(Math.random()*100); 
-		myWorld.getCreatureList().add(new Healthy(new Location(newX,newY), myWorld));
 	}
 	
 	public void runWorld(){

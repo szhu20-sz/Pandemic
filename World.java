@@ -1,3 +1,5 @@
+package Pandemic;
+
 import java.util.ArrayList;
 
 public class World {
@@ -15,7 +17,7 @@ public class World {
 	
 	public void letTimePass(){
 		
-		makeNewCreatures();
+		//makeNewCreatures();
 		//eatThings();
 		//creaturesGetOlder();
 		//purgeTheDead();		
@@ -25,9 +27,9 @@ public class World {
 		
 		int currentSizeOfCreatureList = creatureList.size();
 		System.out.println("size of list is "+currentSizeOfCreatureList);
-		for(int i=0; i< currentSizeOfCreatureList; i++) {
-			creatureList.get(i).reproduce();
-		}
+		//for(int i=0; i< currentSizeOfCreatureList; i++) {
+		//	creatureList.get(i).reproduce();
+		//}
 	}
 	
 	public void purgeTheDead(){
