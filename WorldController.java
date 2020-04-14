@@ -27,12 +27,11 @@ public class WorldController extends GraphicsProgram {
 		theWorld = new World(100,100);
 		theWorld.getCreatureList().add( new Grass( new Location(3,6), theWorld ));
 		theWorld.getCreatureList().add( new Grass( new Location(4,6), theWorld ));
+		for (int i=1; i<50; i ++) {
+			theWorld.getCreatureList().add (new Healthy (new Location (i,i+1), theWorld));
+		}
+		theWorld.getCreatureList().add (new InfectedAsymptomatic (new Location (1,1), theWorld));
 		theWorldCanvas = this.getGCanvas();
-		
-		//theWorld.getCreatureList().add( new Cow ( new Location(5,6), theWorld ));
-//		cow.reproduce();
-		
-		
 	}
 	
 	public void runWorld(){
