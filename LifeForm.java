@@ -41,10 +41,12 @@ public abstract class LifeForm {
 			alive=false;
 	}
 	
+	public abstract void checkInfection();
+	
 	// to be alive you have to be able to reproduce....
 	//public abstract void reproduce();
 	
-	public abstract void move();
+	//public abstract void move();
 	
 	public boolean isDead(){
 		return !alive;

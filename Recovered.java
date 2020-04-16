@@ -1,14 +1,20 @@
 package Pandemic;
 
 import java.awt.Color;
-import java.util.Random;
 
 public class Recovered extends Human {
 
 	public Recovered(Location loc, World w) {
 		super(loc, w);
-		myColor = Color.yellow;
-		myLifeSpan = 10;
+		myColor = Color.orange;
+	}
+	
+	public Recovered(int myLifeSpan, Location myLocation, Color myColor, World myWorld) {
+		super(myLifeSpan, myLocation, myColor, myWorld);
+	}
+	
+	public void checkInfection() {
+		
 	}
 		
 	public void move () {
@@ -30,3 +36,4 @@ public class Recovered extends Human {
      }  
 	
 }
+

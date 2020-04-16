@@ -6,7 +6,7 @@ public class World {
 	
 	private int width;
 	private int height;
-	private ArrayList<LifeForm> creatureList;
+	public ArrayList<LifeForm> creatureList;
 	
 	public World(int width, int height) {
 		super();
@@ -20,7 +20,14 @@ public class World {
 		//makeNewCreatures();
 		//eatThings();
 		//creaturesGetOlder();
-		//purgeTheDead();		
+		//purgeTheDead();
+		checkInfectionStatus();
+	}
+	
+	public void checkInfectionStatus() {
+		for (int i = 0; i <creatureList.size(); i++) {
+			creatureList.get(i).checkInfection();
+		}
 	}
 	
 	public void makeNewCreatures() {
