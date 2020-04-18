@@ -25,10 +25,12 @@ public class WorldController extends GraphicsProgram {
 	
 	public void setUpWorld(){
 		theWorld = new World(100,100);
-		for (int i=1; i<50; i ++) {
-			theWorld.getCreatureList().add (new Healthy (new Location (i,i+1), theWorld));
+		for (int i=0; i<100; i ++) {
+			int rand= rgen.nextInt(0, 99);
+			theWorld.getCreatureList().add (new Healthy (new Location (i,rand), theWorld));
 		}
-		theWorld.getCreatureList().add (new InfectedAsymptomatic (new Location (1,1), theWorld));
+		theWorld.getCreatureList().add (new InfectedSymptomatic (new Location (1,1), theWorld));
+		theWorld.getCreatureList().add (new Healthy (new Location (2,1), theWorld));
 		theWorldCanvas = this.getGCanvas();
 	}
 	
